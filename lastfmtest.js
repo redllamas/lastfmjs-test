@@ -41,8 +41,7 @@ function outputtopartists() {
   var output = JSON.parse(oReq.response);
   var html = '';
   var outbox = document.getElementById("outbox");
-  var i;
-  for (i in output.topartists.artist[0]){
+  for (var i in output.topartists.artist[0]){
    html = "<p><a href=" + i.url + " target='_blank'>" + i.name + " - " + "Play count : " + i.playcount + "</a></p>";
    outbox.innerHTML = html;
   }
