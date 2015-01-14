@@ -1,3 +1,5 @@
-A test for accessing the Last.fm REST api using JavaScript, receiving the data as JSON.
+A test for accessing the Last.fm REST api using Javascript, receiving the data as JSON.
 
-Currently using jQuery but will add a vanilla JavaScript option for practice, and flesh out the look of the site.
+Hand-built using both jQuery and native Javascript methods.
+
+Still pretty crude, but it does the job.
