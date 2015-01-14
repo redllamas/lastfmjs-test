@@ -10,7 +10,7 @@ var params = {
 };
 
 $(document).ready(function() {  
-    $("#getTopArtistsjQ").click(function() { 
+    $("#getViajQ").click(function() { 
       $.getJSON("http://ws.audioscrobbler.com/2.0/?method=user.getTopArtists" + "&user="+ params.user + "&api_key=" + params.key + "&limit=15&format=json&callback=?", function(json) {  
         var html = '',
             phtml = '';  
