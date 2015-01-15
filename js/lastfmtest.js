@@ -9,18 +9,29 @@ var params = {
   user: "etrinsou"
 };
 
-$(document).ready(function() {  
-    $("#getViajQ").click(function() { 
-      $.getJSON("http://ws.audioscrobbler.com/2.0/?method=user.getTopArtists" + "&user="+ params.user + "&api_key=" + params.key + "&limit=15&format=json&callback=?", function(json) {  
-        var html = '',
-            phtml = '';  
-        $.each(json.topartists.artist, function(i, item) {  
-            html += "<p><a href=" + item.url + " target='_blank'>" + item.name + " - " + "Play count : " + item.playcount + "</a></p>";
-            phtml +=  "<a href=" + item.url + " target='_blank'><img src=" + item.image[1]["#text"] + " alt=" + item.name + " /></a>";
-        });  
-        $('#outbox').append(html);
-        $('#photobox').append(phtml);  
-      });
+$(document).ready(function() {
+
+      $("#chooseMethod").change(function() {
+        if ($(this).val() === "getViajQ") {
+          params.user = $("#lfminfo").val();
+          $.getJSON("http://ws.audioscrobbler.com/2.0/?method=user.getTopArtists" + "&user="+ params.user + "&api_key=" + params.key + "&limit=15&format=json&callback=?", function(json) {  
+            var html = '',
+                phtml = '';  
+            $.each(json.topartists.artist, function(i, item) {  
+                html += "<p><a href=" + item.url + " target='_blank'>" + item.name + " - " + "Play count : " + item.playcount + "</a></p>";
+                phtml +=  "<a href=" + item.url + " target='_blank'><img src=" + item.image[1]["#text"] + " alt=" + item.name + " /></a>";
+            });  
+            $('#outbox').append(html);
+            $('#photobox').append(phtml);
+        });
+      }
+      if ($(this).val() === "getViaJS") {
+        outputtopartists();
+      }
+      if ($(this).val() === "empty") {
+        $('#outbox').empty();
+        $('#photobox').empty();
+      }
   });
 });
 

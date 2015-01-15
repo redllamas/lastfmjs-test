@@ -27,6 +27,10 @@ h1 {
   padding: 20px;
 }
 
+#lfminfo {
+  margin-right: 10px;
+}
+
 .main {
   position: relative;
   display: block;
