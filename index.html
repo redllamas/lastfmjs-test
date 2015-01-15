@@ -18,13 +18,14 @@
       </div>
       <div class="main">
         <form id="getLFMData">
-          <input id="lfminfo" type="text" placeholder="gimme a username">
+          <input id="lfmuser" type="text" placeholder="gimme a username">
+          <select name="lfminfo" id="lfminfo">
+            <option value="topArtists">Top Artists</option>
+            <option value="topTracks">Top Tracks</option>
+          </select>
           <input type="button" id="getData" value="Let's go!">
         </form>
-<!--         <button id="getViajQ">Get top artists with jQuery!</button>
-        <button id="getViaJS" onclick="javascript:outputtopartists();">Get top artists with regular JS!</button> -->
         <div id="outbox"></div>
-        <div id="photobox"></div>
       </div>
     </div>
       
