@@ -17,15 +17,19 @@
         <h1>今日の響き</h1>
       </div>
       <div class="main">
-        <button id="getViajQ">Get top artists with jQuery!</button>
-        <button id="getViaJS" onclick="javascript:outputtopartists();">Get top artists with regular JS!</button>
+        <form id="getLFMData">
+          <input id="lfminfo" type="text" placeholder="gimme a username">
+          <input type="button" id="getData" value="Let's go!">
+        </form>
+<!--         <button id="getViajQ">Get top artists with jQuery!</button>
+        <button id="getViaJS" onclick="javascript:outputtopartists();">Get top artists with regular JS!</button> -->
         <div id="outbox"></div>
         <div id="photobox"></div>
       </div>
     </div>
       
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.8.3.min.js"><\/script>')</script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
     <script src="js/lastfmtest.js"></script>
   </body>
 </html>
